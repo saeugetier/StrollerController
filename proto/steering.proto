@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+message SteeringMessage {
+  required float force = 1;
+  required bool direction = 2;
+  required bool breaking = 3;
+  required int32 counter = 4; 
+}
+
+message FeedbackMessage {
+    required int32 counter = 1;
+    required float speed = 2;
+    optional float battery = 3;
+}
